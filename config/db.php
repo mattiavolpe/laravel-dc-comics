@@ -1,6 +1,7 @@
 <?php
 
 return [
+    "comics" => [
     [
         "title" => "Action Comics #1000: The Deluxe Edition",
         "description" => "The celebration of 1,000 issues of Action Comics continues with a new, Deluxe Edition of the amazing comic that won raves when it hit comics shops in April! This hardcover includes all the stories from that issue, plus the tale by writer Paul Levitz and artist Neal Adams that appeared in the Action Comics: 80 Years Of Superman hardcover, as well as all the variant covers, design sketches by Jim Lee for Superman’s new look, scripts for the stories, the original art from the lost story featuring art by Curt Swan and more! Plus: a complete reprint of the stories that started it all—the Superman stories Action Comics #1 and 2 from 1938!",
@@ -212,4 +213,59 @@ return [
             "Joëlle Jones"
         ],
     ],
+    ],
+    "pages" => [
+        "characters",
+        "comics",
+        "movies",
+        "tv",
+        "games",
+        "collectibles",
+        "videos",
+        "fans",
+        "news",
+        "shop"
+      ],
+      "footerLinks" => [
+        "dc comics" => [
+            "Characters",
+            "Comics",
+            "Movies",
+            "TV",
+            "Games",
+            "Videos",
+            "News"
+        ],
+        "shop" => [
+            "Shop DC",
+            "Shop DC Collectibles"
+        ],
+        "dc" => [
+            "Terms Of Use",
+            "Privacy policy (New)",
+            "Ad Choices",
+            "Advertising",
+            "Jobs",
+            "Subscriptions",
+            "Talent Workshops",
+            "CPSC Certificates",
+            "Ratings",
+            "Shop Help",
+            "Contact Us"
+        ],
+        "sites" => [
+            "DC",
+            "MAD Magazine",
+            "DC Kids",
+            "DC Universe",
+            "DC Power Visa"
+        ]
+      ],
+      "dcSitesBanner" => [
+        "digital comics" => "buy-comics-digital-comics.png",
+        "dc merchandise" => "buy-comics-merchandise.png",
+        "subscription" => "buy-comics-subscriptions.png",
+        "comic shop locator" => "buy-comics-shop-locator.png",
+        "dc power visa" => "buy-dc-power-visa.png",
+      ]
 ];
