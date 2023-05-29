@@ -2,7 +2,8 @@
 
 @section("content")
   <div class="container">
-    <div class="table-responsive py-5">
+    <a name="newComic" id="newComic" class="btn btn-primary my-5" href="{{ route('comics.create') }}" role="button">New Comic</a>
+    <div class="table-responsive pb-5">
       <table class="table table-primary m-0">
         <thead>
           <tr>
