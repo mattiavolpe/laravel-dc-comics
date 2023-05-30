@@ -9,7 +9,7 @@ use App\Models\Comic;
 class PageController extends Controller
 {
     public function index() {
-        $comics = Comic::all();
+        $comics = Comic::orderByDesc('id')->get();
         $db = config("db");
         return view("comics", compact("comics", "db"));
     }

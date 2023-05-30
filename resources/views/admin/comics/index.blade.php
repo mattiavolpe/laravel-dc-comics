@@ -35,6 +35,12 @@
               <a href="{{ route('comics.show', $comic->id) }}">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
+              <a href="{{ route('comics.edit', $comic->id) }}">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </a>
+              <a href="{{ route('comics.destroy', $comic->id) }}">
+                <i class="fa-regular fa-trash-can"></i>
+              </a>
             </td>
           </tr>
           @endforeach

@@ -5,7 +5,7 @@
   <div class="card w-50 mx-auto">
     <div class="card-header">
       <img src="{{ $comic -> thumb }}" alt="" class="card-img-top">
-      <h2><--{{ $comic -> id }}--&gt;: {{ $comic -> title }}</h2>
+      <h2>---{{ $comic -> id }}---<br>{{ $comic -> title }}</h2>
       <p>{{ $comic -> description }}</p>
       <h6>Price:
         <span class="fw-normal">{{ $comic -> price }}</span>
