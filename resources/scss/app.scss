@@ -85,6 +85,18 @@ body {
       background-color: #EDEEEF;
     }
 
+    .table-responsive {
+      img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .itemDate {
+        width: 110px;
+      }
+    }
+
     .deletionModal {
       position: fixed;
       top: 50%;

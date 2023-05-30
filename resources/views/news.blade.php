@@ -4,7 +4,6 @@
 Characters
 @endsection
 
-
 @section("content")
 <div id="separator" class="bg-primary py-5">
   <div class="container">

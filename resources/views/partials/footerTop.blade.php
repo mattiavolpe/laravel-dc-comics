@@ -4,17 +4,17 @@
       <div>
         <h4 class="text-uppercase text-white fw-bold my-3">DC COMICS</h4>
         <ul>
-          @foreach($db["footerLinks"]["dc comics"] as $page)
+          @foreach($data['dcComicsLinks'] as $page)
           <li>
-            <a class="text-secondary" href="#">{{ $page }}</a>
+            <a class="text-secondary" href="#">{{ $page->name }}</a>
           </li>
           @endforeach
         </ul>
         <h4 class="text-uppercase text-white fw-bold my-3">SHOP</h4>
         <ul>
-          @foreach($db["footerLinks"]["shop"] as $page)
+          @foreach($data['shopLinks'] as $page)
           <li>
-            <a class="text-secondary" href="#">{{ $page }}</a>
+            <a class="text-secondary" href="#">{{ $page->name }}</a>
           </li>
           @endforeach
         </ul>
@@ -22,9 +22,9 @@
       <div>
         <h4 class="text-uppercase text-white fw-bold my-3">DC</h4>
         <ul>
-          @foreach($db["footerLinks"]["dc"] as $page)
+          @foreach($data['dcLinks'] as $page)
           <li>
-            <a class="text-secondary" href="#">{{ $page }}</a>
+            <a class="text-secondary" href="#">{{ $page->name }}</a>
           </li>
           @endforeach
         </ul>
@@ -32,9 +32,9 @@
       <div>
         <h4 class="text-uppercase text-white fw-bold my-3">SITES</h4>
         <ul>
-          @foreach($db["footerLinks"]["sites"] as $page)
+          @foreach($data['siteLinks'] as $page)
           <li>
-            <a class="text-secondary" href="#">{{ $page }}</a>
+            <a class="text-secondary" href="#">{{ $page->name }}</a>
           </li>
           @endforeach
         </ul>
