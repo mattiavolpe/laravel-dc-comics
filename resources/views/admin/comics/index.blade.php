@@ -4,7 +4,7 @@
   <div class="container">
     <a name="newComic" id="newComic" class="btn btn-primary my-5" href="{{ route('comics.create') }}" role="button">New Comic</a>
     <div class="table-responsive pb-5">
-      <table class="table table-primary m-0">
+      <table class="table table-primary m-0 align-middle">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -38,11 +38,12 @@
               <a href="{{ route('comics.edit', $comic->id) }}">
                 <i class="fa-regular fa-pen-to-square"></i>
               </a>
-              <a href="{{ route('comics.destroy', $comic->id) }}">
+              <a href="#">
                 <i class="fa-regular fa-trash-can"></i>
               </a>
             </td>
           </tr>
+          @include("partials.deletionModal")
           @endforeach
         </tbody>
       </table>
