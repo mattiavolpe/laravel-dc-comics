@@ -4,7 +4,7 @@
         @foreach($comics as $comic)
         <div class="col">
             <div class="card border-0 rounded-0 bg-transparent text-white text-uppercase">
-                <a href="#">
+                <a href="{{ route('showComic', $comic->id) }}">
                     <img src="{{ $comic['thumb'] }}" class="card-img-top"></img>
                     <h6 class="mb-0 fw-normal py-3 text-white">{{ $comic['series'] }}</h6>
                 </a>

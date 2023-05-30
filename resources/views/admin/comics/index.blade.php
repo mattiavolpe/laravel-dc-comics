@@ -3,6 +3,14 @@
 @section("content")
   <div class="container">
     <a name="newComic" id="newComic" class="btn btn-primary my-5" href="{{ route('comics.create') }}" role="button">New Comic</a>
+
+    @if(session("message"))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <strong>{{ session("message") }}</strong>
+    </div>
+    @endif
+
     <div class="table-responsive pb-5">
       <table class="table table-primary m-0 align-middle">
         <thead>

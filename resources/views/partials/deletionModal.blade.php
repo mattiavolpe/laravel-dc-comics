@@ -5,6 +5,6 @@
     @csrf
     @method("delete")
     <button type="submit" class="btn btn-danger">Delete</button>
-    <a name="cancelDeletion" class="cancelDeletion btn btn-primary" href="#" role="button">Cancel</a>
+    <a name="cancelDeletion" class="cancelDeletion btn btn-primary" href="#" role="button">Preserve</a>
   </form>
 </div>

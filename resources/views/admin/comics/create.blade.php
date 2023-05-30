@@ -37,7 +37,7 @@
       <div class="mb-3 row">
         <label for="sale_date" class="col-2 col-form-label">Sale date (yyyy-mm-dd)</label>
         <div class="col-10">
-          <input type="text" class="form-control" name="sale_date" id="sale_date" placeholder="Comic sale date here">
+          <input type="date" class="form-control" name="sale_date" id="sale_date" placeholder="Comic sale date here">
         </div>
       </div>
       <div class="mb-3 row">

@@ -2,6 +2,14 @@
 
 @section("content")
 <div class="container py-5">
+    
+  @if(session("message"))
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <strong>{{ session("message") }}</strong>
+  </div>
+  @endif
+
   <div class="card w-50 mx-auto">
     <div class="card-header">
       <img src="{{ $comic -> thumb }}" alt="" class="card-img-top">
