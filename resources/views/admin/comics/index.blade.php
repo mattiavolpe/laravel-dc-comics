@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section("content")
-  <div class="container">
+  <div class="container text-dark">
     <a name="newComic" id="newComic" class="btn btn-primary my-5" href="{{ route('comics.create') }}" role="button">New Comic</a>
 
     @if(session("message") && session("message") != "Please, fill all the required fields")
@@ -33,7 +33,7 @@
         </thead>
         <tbody>
           @foreach($data['comics'] as $comic)
-          <tr class="">
+          <tr>
             <td scope="row">{{$comic->id}}</td>
             <td width="15%">
               <img class="img-fluid" src="{{$comic->thumb}}" alt="">
@@ -45,13 +45,13 @@
             <td>{{$comic->sale_date}}</td>
             <td>{{$comic->type}}</td>
             <td class="text-center">
-              <a href="{{ route('comics.show', $comic->id) }}">
+              <a class="d-block text-dark btn btn-success" href="{{ route('comics.show', $comic->id) }}">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </a>
-              <a href="{{ route('comics.edit', $comic->id) }}">
+              <a class="d-block text-dark btn btn-warning my-2" href="{{ route('comics.edit', $comic->id) }}">
                 <i class="fa-regular fa-pen-to-square"></i>
               </a>
-              <a href="#">
+              <a class="d-block text-dark btn btn-danger" href="#">
                 <i class="fa-regular fa-trash-can"></i>
               </a>
             </td>
