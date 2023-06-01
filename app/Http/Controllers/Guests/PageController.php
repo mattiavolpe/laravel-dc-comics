@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Guests;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Comic;
 use App\Models\DcComicsLink;
 use App\Models\DcLink;

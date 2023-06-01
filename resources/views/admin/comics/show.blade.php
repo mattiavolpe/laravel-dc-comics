@@ -16,7 +16,7 @@
       <h2>---{{ $data['comic'] -> id }}---<br>{{ $data['comic'] -> title }}</h2>
       <p>{{ $data['comic'] -> description }}</p>
       <h6>Price:
-        <span class="fw-normal">{{ $data['comic'] -> price }}</span>
+        <span class="fw-normal">${{ $data['comic'] -> price }}</span>
       </h6>
       
       <h6>Series:
