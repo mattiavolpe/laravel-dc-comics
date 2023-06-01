@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comic;
 use App\Models\DcComicsLink;
 use App\Models\DcLink;
@@ -54,26 +56,13 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreComicRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        if(empty($request->title) || empty($request->description) || empty($request->thumb) || empty($request->price)) {
-            return to_route('comics.create')->with("message", "Please, fill all the required fields");
-        }
-
-        $data = [
-            "title" => $request->title,
-            "description" => $request->description,
-            "thumb" => $request->thumb,
-            "price" => $request->price,
-            "series" => $request->series,
-            "sale_date" => $request->sale_date,
-            "type" => $request->type
-        ];
-        
-        Comic::create($data);
+        $valData = $request->validated();        
+        Comic::create($valData);
         return to_route('comics.index')->with("message", "Comic $request->title successfully created");
     }
 
@@ -120,28 +109,14 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\UpdateComicRequest  $request
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        if(empty($request->title) || empty($request->description) || empty($request->thumb) || empty($request->price)) {
-            return to_route('comics.index')->with("message", "Please, fill all the required fields");
-        }
-
-        $data = [
-            "title" => $request -> title,
-            "description" => $request -> description,
-            "thumb" => $request -> thumb,
-            "price" => $request -> price,
-            "series" => $request -> series,
-            "sale_date" => $request -> sale_date,
-            "type" => $request -> type
-        ];
-
-        $comic->update($data);
-        
+        $valData = $request->validated();        
+        $comic->update($valData);
         return to_route("comics.show", $comic -> id)->with("message", "Comic $request->title successfully updated");
     }
 
